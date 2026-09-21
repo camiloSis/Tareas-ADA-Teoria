@@ -1,0 +1,5 @@
+[0] Config.pm:329> INFO - This is Biber 2.22
+[0] Config.pm:332> INFO - Logfile is 'main.blg'
+[53] biber:342> INFO - === dom sep 20, 2026, 22:41:09
+[252] Utils.pm:480> ERROR - Cannot find 'main.bcf'!
+[252] Biber.pm:137> INFO - ERRORS: 1
