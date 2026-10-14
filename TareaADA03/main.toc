@@ -1,0 +1,6 @@
+\babel@toc {spanish}{}\relax 
+\babel@toc {spanish}{}\relax 
+\contentsline {section}{\numberline {1}Actividades}{3}{section.1}%
+\contentsline {subsection}{\numberline {1.1}Comparación de algoritmos}{3}{subsection.1.1}%
+\contentsline {subsection}{\numberline {1.2}Casos de uso}{4}{subsection.1.2}%
+\contentsline {section}{\numberline {2}Referencias bibliográficas}{6}{section.2}%
