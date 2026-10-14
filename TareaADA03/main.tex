@@ -7,10 +7,10 @@
 \usepackage{booktabs}
 \usepackage{pdflscape}
 \usepackage{url}
-\usepackage{hyperref}
+\usepackage[natbibapa]{apacite}
 \usepackage{array}
 \newcolumntype{x}[1]{>{\centering\arraybackslash\hspace{0pt}}p{#1}}
-\usepackage[natbibapa]{apacite}
+\usepackage{hyperref}
 \usepackage{pdfpages}
 \usepackage{multirow}
 \usepackage[normalem]{ulem}
@@ -27,7 +27,6 @@
   commentstyle=\color{red},
   keywordstyle=\color{blue}
 }
-%\usepackage{booktabs}
 \usepackage{caption}
 \usepackage{subcaption}
 \usepackage{float}
@@ -39,28 +38,27 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \newcommand{\itemEmail}{ccapatinta@unsa.edu.pe}
 \newcommand{\itemStudent}{Camilo B.A. Capatinta Almanza}
-\newcommand{\itemCourse}{Organización y Métodos}
-\newcommand{\itemCourseCode}{2502227}
+\newcommand{\itemCourse}{Análisis y Diseño de Algoritmos}
+\newcommand{\itemCourseCode}{1702231}
 \newcommand{\itemSemester}{IV}
 \newcommand{\itemUniversity}{Universidad Nacional de San Agustín de Arequipa}
 \newcommand{\itemFaculty}{Facultad de Ingeniería de Producción y Servicios}
 \newcommand{\itemDepartment}{Departamento Académico de Ingeniería de Sistemas e Informática}
 \newcommand{\itemSchool}{Escuela Profesional de Ingeniería de Sistemas}
 \newcommand{\itemAcademic}{2026 - B}
-\newcommand{\itemInput}{02/10/2026}
-\newcommand{\itemOutput}{05/10/2026}
-\newcommand{\itemDocente}{William M. Bornas Rios}
-\newcommand{\itemTheme}{Minería de procesos, ERP, ROI y Kardex}
-\newcommand{\itemPracticeNumber}{}
+\newcommand{\itemInput}{12/10/2026}
+\newcommand{\itemOutput}{--/10/2026}
+\newcommand{\itemDocente}{Harvey A. Norman Patrick}
+\newcommand{\itemTheme}{Algoritmos en grafos}
+\newcommand{\itemPracticeNumber}{03}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-\usepackage[english,spanish]{babel}
 \usepackage[utf8]{inputenc}
+\usepackage[english,spanish]{babel}
 \AtBeginDocument{\selectlanguage{spanish}}
 \renewcommand{\figurename}{Figura}
 \renewcommand{\refname}{Referencias}
-\renewcommand{\tablename}{Tabla} %esto no funciona cuando se usa babel
 \AtBeginDocument{%
 	\renewcommand\tablename{Tabla}
 }
@@ -71,15 +69,35 @@
 \setlength{\headheight}{40.51407pt}
 \renewcommand{\headrulewidth}{1pt}
 \renewcommand{\footrulewidth}{1pt}
-\fancyhead[L]{\textbf{\itemUniversity}}
-\fancyhead[C]{\fontsize{7}{7}\selectfont\itemFaculty \\ \itemDepartment \\ \itemSchool \\ \textbf{\itemCourse}}
-\fancyhead[R]{\textbf{\itemAcademic}}
+\fancyhead[L]{\raisebox{-0.2\height}{\includegraphics[width=3cm]{img/logo_episunsa.png}}}
+\fancyhead[C]{\fontsize{7}{7}\selectfont \itemUniversity \\ \itemFaculty \\ \itemDepartment \\ \itemSchool \\ \textbf{\itemCourse}}
+\fancyhead[R]{\raisebox{-0.2\height}{\includegraphics[width=1.2cm]{img/logo_abet.png}}}
 \fancyfoot[L]{Estudiante Capatinta Camilo}
 \fancyfoot[C]{\itemCourse}
 \fancyfoot[R]{Página \thepage}
 
+\newcommand{\landscapeheader}{%
+    \begin{tabular*}{\linewidth}{@{\extracolsep{\fill}}c c c@{}}
+        \includegraphics[width=3cm]{img/logo_episunsa.png} &
+        {\fontsize{7}{8}\selectfont\shortstack[c]{
+        \itemUniversity\\
+        \itemFaculty\\
+        \itemDepartment\\
+        \itemSchool\\
+        \textbf{\itemCourse}}} &
+        \includegraphics[width=1.2cm]{img/logo_abet.png}
+    \end{tabular*}
+    \par\vspace{0.15cm}\hrule\vspace{0.4cm}
+}
+
+\newcommand{\landscapefooter}{%
+    \vfill
+    \noindent\hrule\vspace{0.15cm}
+    \noindent Estudiante Capatinta Camilo\hfill\itemCourse\hfill Página \thepage
+}
+
 % Para el código fuente
-\usepackage{color, colortbl}
+\usepackage{colortbl}
 \definecolor{dkgreen}{rgb}{0,0.6,0}
 \definecolor{gray}{rgb}{0.5,0.5,0.5}
 \definecolor{mauve}{rgb}{0.58,0,0.82}
@@ -108,9 +126,7 @@
 \addto\captionsspanish{\renewcommand{\contentsname}{Índice}}
 \hypersetup{
     colorlinks=true,
-    linkcolor=black,   % enlaces del índice
-    citecolor=black,
-    urlcolor=black,
+    allcolors=black,
     linktoc=all        % toda la línea del índice es clicable
 }
 
@@ -125,7 +141,7 @@
 	\vspace*{10px}
 	
 	\begin{center}	
-		\fontsize{17}{17} \textbf{ Ensayo }
+		\fontsize{17}{17} \textbf{ Actividad \itemPracticeNumber}
 	\end{center}
 	\centerline{\textbf{\Large Tema: \itemTheme}}
 	%\vspace*{0.5cm}	
@@ -191,11 +207,17 @@
 
     \subsection{Comparación de algoritmos}
 
-    \begin{table}[htbp]
+    \newgeometry{left=1cm,right=1cm,top=3cm,bottom=3cm}
+    \begin{landscape}
+    \thispagestyle{empty}
+    \landscapeheader
+    \begin{center}
         \centering
-        \caption{Complejidad temporal y espacial para grafos con $n=10$ nodos}
+        \small
+        \captionsetup{hypcap=false}
+        \captionof{table}{Complejidad temporal y espacial para grafos con $n=10$ nodos}
         \label{tab:complejidades}
-        \begin{tabular}{l c c c}
+        \begin{tabular}{@{}p{3.3cm} p{4cm} p{5.6cm} p{5.6cm}@{}}
             \toprule
             Algoritmo & Tiempo de ejecución ($n=10$) & Complejidad temporal & Complejidad espacial \\
             \midrule
@@ -206,16 +228,19 @@
             Floyd (Floyd--Warshall) \cite{floyd1962} & $1000$ operaciones ($V^3$) & $O(V^3)$ (fija, sin variantes relevantes) & $O(V^2)$ (matriz de distancias) \\
             \bottomrule
         \end{tabular}
-    \end{table}
-
-    \clearpage
-    \subsection{Casos de uso}
+    \end{center}
+    \landscapefooter
+    \end{landscape}
     \begin{landscape}
-    \begin{table}[htbp]
+    \thispagestyle{empty}
+    \landscapeheader
+    \begingroup
         \centering
-        \caption{Casos de uso: cuándo usar y cuándo no usar cada algoritmo}
+        \scriptsize
+        \captionsetup{hypcap=false}
+        \captionof{table}{Casos de uso: cuándo usar y cuándo no usar cada algoritmo}
         \label{tab:casos-uso}
-        \begin{tabular}{l p{7cm} p{7cm}}
+        \begin{tabular}{@{}p{3.3cm} p{5.6cm} p{5.6cm}@{}}
             \toprule
             Algoritmo & Cuándo usar & Cuándo no usar \\
             \midrule
@@ -226,11 +251,15 @@
             Floyd (Floyd–Warshall) \cite{floyd1962} & Calcular los caminos más cortos entre todos los pares de nodos a la vez, incluso con pesos negativos (siempre que no haya ciclos negativos); útil en grafos pequeños o densos donde $O(V^3)$ es aceptable. & En grafos grandes o dispersos, el costo $O(V^3)$ resulta excesivo comparado con ejecutar Dijkstra desde cada nodo ($O(V\cdot(V+E)\log V)$); tampoco es la opción natural si solo se necesita el camino más corto desde un único origen. \\
             \bottomrule
         \end{tabular}
-    \end{table}
+        \par
+    \endgroup
+    \landscapefooter
     \end{landscape}
+    \restoregeometry
 
     \section{Referencias bibliográficas}
     \bibliographystyle{apacite}
+    \nocite{*}
     \bibliography{referencias}
 
     \end{document}
