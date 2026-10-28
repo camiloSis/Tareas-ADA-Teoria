@@ -1,0 +1,19 @@
+\babel@toc {spanish}{}\relax 
+\babel@toc {spanish}{}\relax 
+\contentsline {section}{\numberline {1}Actividades}{3}{section.1}%
+\contentsline {subsection}{\numberline {1.1}Objetivo}{3}{subsection.1.1}%
+\contentsline {subsection}{\numberline {1.2}Definición}{3}{subsection.1.2}%
+\contentsline {subsection}{\numberline {1.3}Elementos de un algoritmo recursivo correcto}{3}{subsection.1.3}%
+\contentsline {subsection}{\numberline {1.4}El principio de inducción y la correctitud de la recursión}{3}{subsection.1.4}%
+\contentsline {subsection}{\numberline {1.5}Proceso de diseño de un algoritmo recursivo}{4}{subsection.1.5}%
+\contentsline {subsection}{\numberline {1.6}Tipos de recursión}{4}{subsection.1.6}%
+\contentsline {subsection}{\numberline {1.7}La pila de llamadas y el costo en memoria}{4}{subsection.1.7}%
+\contentsline {subsection}{\numberline {1.8}Recursión frente a iteración}{5}{subsection.1.8}%
+\contentsline {subsection}{\numberline {1.9}Relación con otras técnicas de diseño de algoritmos}{5}{subsection.1.9}%
+\contentsline {subsection}{\numberline {1.10}Ejemplos de diseño recursivo}{5}{subsection.1.10}%
+\contentsline {subsubsection}{\numberline {1.10.1}Ejemplo 1: Factorial (recursión lineal)}{5}{subsubsection.1.10.1}%
+\contentsline {subsubsection}{\numberline {1.10.2}Ejemplo 2: Sucesión de Fibonacci (recursión múltiple)}{5}{subsubsection.1.10.2}%
+\contentsline {subsubsection}{\numberline {1.10.3}Ejemplo 3: Torres de Hanoi (divide y vencerás recursivo)}{6}{subsubsection.1.10.3}%
+\contentsline {subsubsection}{\numberline {1.10.4}Ejemplo 4: Búsqueda binaria (recursión de cola)}{6}{subsubsection.1.10.4}%
+\contentsline {subsection}{\numberline {1.11}Resumen}{6}{subsection.1.11}%
+\contentsline {section}{\numberline {2}Referencias bibliográficas}{6}{section.2}%

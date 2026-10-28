@@ -1,0 +1,462 @@
+\documentclass{article}
+\usepackage{amsmath}
+\usepackage[top=3cm, bottom=3cm, outer=3cm, inner=3cm]{geometry}
+\usepackage{multicol}
+\usepackage{graphicx}
+\usepackage{booktabs}
+\usepackage{pdflscape}
+\usepackage{url}
+\usepackage[natbibapa]{apacite}
+\usepackage{array}
+\newcolumntype{x}[1]{>{\centering\arraybackslash\hspace{0pt}}p{#1}}
+\usepackage{hyperref}
+\usepackage{pdfpages}
+\usepackage{multirow}
+\usepackage[normalem]{ulem}
+\useunder{\uline}{\ul}{}
+\usepackage{svg}
+\usepackage[T1]{fontenc}
+\usepackage{xcolor}
+\usepackage{listings}
+\lstdefinestyle{ascii-tree}{
+    literate={├}{|}1 {─}{--}1 {└}{+}1 
+  }
+\lstset{basicstyle=\ttfamily,
+  showstringspaces=false,
+  commentstyle=\color{red},
+  keywordstyle=\color{blue}
+}
+\usepackage{caption}
+\usepackage{subcaption}
+\usepackage{float}
+\newcolumntype{M}[1]{>{\centering\arraybackslash}m{#1}}
+\newcolumntype{N}{@{}m{0pt}@{}}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\newcommand{\itemEmail}{ccapatinta@unsa.edu.pe}
+\newcommand{\itemStudent}{Camilo B.A. Capatinta Almanza}
+\newcommand{\itemCourse}{Análisis y Diseño de Algoritmos}
+\newcommand{\itemCourseCode}{1702231}
+\newcommand{\itemSemester}{IV}
+\newcommand{\itemUniversity}{Universidad Nacional de San Agustín de Arequipa}
+\newcommand{\itemFaculty}{Facultad de Ingeniería de Producción y Servicios}
+\newcommand{\itemDepartment}{Departamento Académico de Ingeniería de Sistemas e Informática}
+\newcommand{\itemSchool}{Escuela Profesional de Ingeniería de Sistemas}
+\newcommand{\itemAcademic}{2026 - B}
+\newcommand{\itemInput}{22/10/2026}
+\newcommand{\itemOutput}{28/10/2026}
+\newcommand{\itemDocente}{Harvey A. Norman Patrick}
+\newcommand{\itemTheme}{Algoritmos recursivos}
+\newcommand{\itemPracticeNumber}{04}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\usepackage[utf8]{inputenc}
+\usepackage[english,spanish]{babel}
+\AtBeginDocument{\selectlanguage{spanish}}
+\renewcommand{\figurename}{Figura}
+\renewcommand{\refname}{Referencias}
+\AtBeginDocument{%
+	\renewcommand\tablename{Tabla}
+}
+
+\usepackage{fancyhdr}
+\pagestyle{fancy}
+\fancyhf{}
+\setlength{\headheight}{40.51407pt}
+\renewcommand{\headrulewidth}{1pt}
+\renewcommand{\footrulewidth}{1pt}
+\fancyhead[L]{\raisebox{-0.2\height}{\includegraphics[width=3cm]{img/logo_episunsa.png}}}
+\fancyhead[C]{\fontsize{7}{7}\selectfont \itemUniversity \\ \itemFaculty \\ \itemDepartment \\ \itemSchool \\ \textbf{\itemCourse}}
+\fancyhead[R]{\raisebox{-0.2\height}{\includegraphics[width=1.2cm]{img/logo_abet.png}}}
+\fancyfoot[L]{Estudiante Capatinta Camilo}
+\fancyfoot[C]{\itemCourse}
+\fancyfoot[R]{Página \thepage}
+
+\newcommand{\landscapeheader}{%
+    \begin{tabular*}{\linewidth}{@{\extracolsep{\fill}}c c c@{}}
+        \includegraphics[width=3cm]{img/logo_episunsa.png} &
+        {\fontsize{7}{8}\selectfont\shortstack[c]{
+        \itemUniversity\\
+        \itemFaculty\\
+        \itemDepartment\\
+        \itemSchool\\
+        \textbf{\itemCourse}}} &
+        \includegraphics[width=1.2cm]{img/logo_abet.png}
+    \end{tabular*}
+    \par\vspace{0.15cm}\hrule\vspace{0.4cm}
+}
+
+\newcommand{\landscapefooter}{%
+    \vfill
+    \noindent\hrule\vspace{0.15cm}
+    \noindent Estudiante Capatinta Camilo\hfill\itemCourse\hfill Página \thepage
+}
+
+% Para el código fuente
+\usepackage{colortbl}
+\definecolor{dkgreen}{rgb}{0,0.6,0}
+\definecolor{gray}{rgb}{0.5,0.5,0.5}
+\definecolor{mauve}{rgb}{0.58,0,0.82}
+\definecolor{codebackground}{rgb}{0.95, 0.95, 0.92}
+\definecolor{tablebackground}{rgb}{0.8, 0, 0}
+
+\lstset{frame=tb,
+	language=bash,
+	aboveskip=3mm,
+	belowskip=3mm,
+	showstringspaces=false,
+	columns=flexible,
+	basicstyle={\small\ttfamily},
+	numbers=none,
+	numberstyle=\tiny\color{gray},
+	keywordstyle=\color{blue},
+	commentstyle=\color{dkgreen},
+	stringstyle=\color{mauve},
+	breaklines=true,
+	breakatwhitespace=true,
+	tabsize=3,
+	backgroundcolor= \color{codebackground},
+}
+
+% Título del índice en español y enlaces en el índice
+\addto\captionsspanish{\renewcommand{\contentsname}{Índice}}
+\hypersetup{
+    colorlinks=true,
+    allcolors=black,
+    linktoc=all        % toda la línea del índice es clicable
+}
+
+% Evita que natbib imprima su propio título "Referencias"
+% (usamos nuestra propia \section para que aparezca numerada en el índice)
+\makeatletter
+\renewcommand{\bibsection}{}
+\makeatother
+
+\begin{document}
+	
+	\vspace*{10px}
+	
+	\begin{center}	
+		\fontsize{17}{17} \textbf{ Actividad \itemPracticeNumber}
+	\end{center}
+	\centerline{\textbf{\Large Tema: \itemTheme}}
+	%\vspace*{0.5cm}	
+
+	\begin{flushright}
+		\begin{tabular}{|M{2.5cm}|N|}
+			\hline 
+			\rowcolor{tablebackground}
+			\color{white} \textbf{Nota}  \\
+			\hline 
+			     \\[30pt]
+			\hline 			
+		\end{tabular}
+	\end{flushright}	
+
+	\begin{table}[h!]
+		\begin{tabular}{|x{4.7cm}|x{4.8cm}|x{4.8cm}|}        
+			\hline 
+			\rowcolor{tablebackground}
+			\color{white} \textbf{Estudiante} & \color{white}\textbf{Escuela}  & \color{white}\textbf{Asignatura}   \\
+			\hline 
+			{\itemStudent \par \itemEmail} & \itemSchool & {\itemCourse \par Semestre: \itemSemester \par Código: \itemCourseCode}     \\
+			\hline 			
+		\end{tabular}
+	\end{table}		
+	
+	\begin{table}[H]
+		\begin{tabular}{|x{4.7cm}|x{4.8cm}|x{4.8cm}|}
+			\hline 
+			\rowcolor{tablebackground}
+			\color{white}\textbf{Docente} & \color{white}\textbf{Tema}  & \color{white}\textbf{Duración}   \\
+			\hline 
+			\itemDocente & \itemTheme & 04 horas   \\
+			\hline 
+		\end{tabular}
+	\end{table}
+	
+	\begin{table}[H]
+		\begin{tabular}{|x{4.7cm}|x{4.8cm}|x{4.8cm}|}
+			\hline 
+			\rowcolor{tablebackground}
+			\color{white}\textbf{Semestre académico} & \color{white}\textbf{Fecha de inicio}  & \color{white}\textbf{Fecha de entrega}   \\
+			\hline 
+			\itemAcademic & \itemInput &  \itemOutput  \\
+			\hline 
+		\end{tabular}
+	\end{table}
+    \clearpage
+    \tableofcontents
+    \clearpage
+
+    \section{Actividades}
+ 
+\subsection{Objetivo}
+ 
+Investigar el diseño de algoritmos recursivos: su definición, los elementos
+que debe tener todo algoritmo recursivo para ser correcto, los tipos de
+recursión, el proceso para diseñar uno a partir de un problema, su relación
+con otras técnicas de diseño (divide y vencerás, backtracking, programación
+dinámica) y sus ventajas y desventajas frente a una solución iterativa.
+ 
+% ------------------------------------------------------------
+\subsection{Definición}
+ 
+Un \textit{algoritmo recursivo} es aquel que resuelve un problema invocándose
+a sí mismo sobre una o más instancias más pequeñas del mismo problema, hasta
+llegar a una instancia lo bastante simple como para resolverse directamente
+\citep{clrs}. La recursión traslada al algoritmo la misma idea que una
+definición recursiva en matemáticas: un objeto se define en términos de una
+versión más simple de sí mismo \citep{wirth1976}.
+ 
+% ------------------------------------------------------------
+\subsection{Elementos de un algoritmo recursivo correcto}
+ 
+Para que la recursión termine y produzca el resultado correcto, todo
+algoritmo recursivo necesita los siguientes elementos \citep{levitin2012}:
+ 
+\begin{itemize}
+  \item \textbf{Caso base (o caso trivial):} una o más instancias del
+        problema que se resuelven directamente, sin nuevas llamadas
+        recursivas. Es la condición de parada de la recursión.
+  \item \textbf{Caso recursivo:} la regla que expresa la solución del
+        problema en términos de la solución de una o más instancias más
+        pequeñas del mismo problema.
+  \item \textbf{Progreso hacia el caso base:} cada llamada recursiva debe
+        operar sobre una instancia estrictamente más cercana al caso base
+        (por ejemplo, un tamaño de entrada menor), de modo que el proceso
+        termine en un número finito de pasos.
+  \item \textbf{Combinación de resultados (cuando aplica):} cuando el
+        problema se divide en más de una subinstancia, el algoritmo debe
+        combinar las soluciones parciales para construir la solución del
+        problema original.
+\end{itemize}
+ 
+Si falta el caso base, o si las llamadas recursivas no se acercan a él, el
+algoritmo entra en una recursión infinita que termina por agotar la memoria
+disponible para las llamadas \citep{brassardbratley1996}.
+ 
+% ------------------------------------------------------------
+\subsection{El principio de inducción y la correctitud de la recursión}
+ 
+La correctitud de un algoritmo recursivo se demuestra de la misma forma que
+una demostración por \textit{inducción matemática} \citep{clrs}:
+ 
+\begin{itemize}
+  \item Se demuestra que el algoritmo es correcto para el caso base (caso
+        base de la inducción).
+  \item Se asume que el algoritmo es correcto para instancias más pequeñas
+        que la actual (hipótesis inductiva).
+  \item Se demuestra que, asumiendo lo anterior, el algoritmo también es
+        correcto para la instancia actual (paso inductivo).
+\end{itemize}
+ 
+Esta correspondencia explica por qué la recursión resulta natural para
+problemas que ya tienen una definición inductiva, como el factorial, los
+números de Fibonacci o el recorrido de estructuras definidas recursivamente
+(listas, árboles).
+ 
+% ------------------------------------------------------------
+\subsection{Proceso de diseño de un algoritmo recursivo}
+ 
+Diseñar un algoritmo recursivo sigue, en general, los siguientes pasos
+\citep{levitin2012}:
+ 
+\begin{itemize}
+  \item \textbf{Paso 1:} identificar uno o más casos base, es decir, las
+        instancias más pequeñas o simples del problema que se pueden
+        resolver sin recursión.
+  \item \textbf{Paso 2:} encontrar una forma de reducir el problema original
+        a una o más instancias más pequeñas del mismo problema (la relación
+        de recurrencia del algoritmo).
+  \item \textbf{Paso 3:} expresar la solución del problema en función de la
+        solución de esas instancias más pequeñas, incluyendo cómo combinar
+        los resultados si hay más de una llamada recursiva.
+  \item \textbf{Paso 4:} verificar que cada llamada recursiva progresa hacia
+        el caso base (por ejemplo, que el tamaño de la entrada disminuye en
+        cada llamada).
+  \item \textbf{Paso 5:} analizar el algoritmo resultante planteando su
+        relación de recurrencia de tiempo de ejecución y resolviéndola (por
+        ejemplo, con el Teorema Maestro cuando aplica).
+\end{itemize}
+ 
+% ------------------------------------------------------------
+\subsection{Tipos de recursión}
+ 
+\begin{itemize}
+  \item \textbf{Recursión directa:} un procedimiento se llama a sí mismo de
+        forma explícita, como en el cálculo del factorial.
+  \item \textbf{Recursión indirecta (o mutua):} un procedimiento $A$ llama a
+        un procedimiento $B$, y $B$ llama de nuevo a $A$, formando un ciclo
+        de llamadas entre dos o más procedimientos.
+  \item \textbf{Recursión lineal:} cada llamada genera como máximo una nueva
+        llamada recursiva (por ejemplo, el factorial o la búsqueda binaria).
+        El árbol de llamadas resultante es, de hecho, una lista.
+  \item \textbf{Recursión múltiple (o en árbol):} cada llamada genera más de
+        una llamada recursiva, como en el cálculo ingenuo de Fibonacci o en
+        el recorrido de un árbol binario. El árbol de llamadas crece en
+        forma de árbol, no de lista.
+  \item \textbf{Recursión anidada:} uno de los argumentos de la llamada
+        recursiva es, a su vez, el resultado de otra llamada recursiva (por
+        ejemplo, la función de Ackermann).
+  \item \textbf{Recursión de cola (\emph{tail recursion}):} la llamada
+        recursiva es la última operación que realiza el procedimiento, sin
+        trabajo pendiente después de que esta retorne. Muchos compiladores e
+        intérpretes pueden optimizar este caso convirtiéndolo internamente
+        en un bucle, evitando el crecimiento de la pila de llamadas
+            \citep{brassardbratley1996}.
+\end{itemize}
+ 
+% ------------------------------------------------------------
+\subsection{La pila de llamadas y el costo en memoria}
+ 
+Cada llamada recursiva que todavía no ha retornado ocupa un marco de
+activación (\emph{activation record}) en la pila de llamadas del programa,
+con sus parámetros, variables locales y la dirección de retorno
+\citep{clrs}. Esto tiene dos consecuencias prácticas:
+ 
+\begin{itemize}
+  \item La \textbf{profundidad máxima de la recursión} (el número de
+        llamadas pendientes en el peor caso) determina la complejidad
+        espacial adicional que introduce la recursión, más allá del espacio
+        que usaría una solución iterativa equivalente.
+  \item Una recursión sin caso base, o cuyo progreso hacia el caso base es
+        incorrecto, agota la pila de llamadas y produce un error de
+        \emph{stack overflow} (desbordamiento de pila).
+\end{itemize}
+ 
+% ------------------------------------------------------------
+\subsection{Recursión frente a iteración}
+ 
+Todo algoritmo recursivo puede reescribirse como un algoritmo iterativo
+equivalente (y viceversa), ya que ambos modelos de cómputo tienen el mismo
+poder expresivo \citep{brassardbratley1996}. La elección entre uno u otro
+es una decisión de diseño:
+ 
+\begin{itemize}
+  \item \textbf{A favor de la recursión:} el código suele ser más corto, más
+        cercano a la definición matemática o a la estructura de datos del
+        problema (listas, árboles, grafos), y más fácil de demostrar
+        correcto mediante inducción.
+  \item \textbf{A favor de la iteración:} evita el costo en memoria y en
+        tiempo de las llamadas de función (creación y destrucción de marcos
+        de activación), y evita el riesgo de \emph{stack overflow} en
+        entradas grandes cuando el lenguaje o el entorno no garantiza
+        optimización de recursión de cola.
+  \item En la práctica, se prefiere la recursión cuando el problema tiene una
+        estructura naturalmente recursiva y la profundidad de recursión es
+        manejable, y la iteración cuando el rendimiento o el límite de pila
+        son críticos.
+\end{itemize}
+ 
+% ------------------------------------------------------------
+\subsection{Relación con otras técnicas de diseño de algoritmos}
+ 
+La recursión es el mecanismo que hace posible varias técnicas de diseño de
+algoritmos más generales \citep{clrs}:
+ 
+\begin{itemize}
+  \item \textbf{Divide y vencerás:} divide el problema en subproblemas
+        independientes del mismo tipo, los resuelve recursivamente y combina
+        sus soluciones (por ejemplo, Merge Sort, Quicksort, la multiplicación
+        de Karatsuba).
+  \item \textbf{Backtracking (vuelta atrás):} explora recursivamente el
+        espacio de soluciones de un problema, retrocediendo cuando una
+        decisión parcial no puede llevar a una solución válida (por ejemplo,
+        el problema de las $N$ reinas o la resolución de laberintos).
+  \item \textbf{Programación dinámica (enfoque top-down con memoización):}
+        parte de la misma relación de recurrencia que una solución recursiva
+        directa, pero almacena los resultados de las subinstancias ya
+        resueltas para no recalcularlas, lo que puede reducir drásticamente
+        el tiempo de ejecución de una recursión múltiple con subproblemas
+        repetidos.
+\end{itemize}
+ 
+% ------------------------------------------------------------
+\subsection{Ejemplos de diseño recursivo}
+ 
+\subsubsection{Ejemplo 1: Factorial (recursión lineal)}
+ 
+\textbf{Caso base:} $0! = 1$.
+
+\textbf{Caso recursivo:} $n! = n \cdot (n-1)!$ para $n \geq 1$.
+ 
+Cada llamada reduce el problema en una unidad ($n \to n-1$), por lo que el
+progreso hacia el caso base es inmediato. Es un ejemplo de recursión lineal:
+el árbol de llamadas es, en realidad, una cadena de $n$ llamadas.
+ 
+\subsubsection{Ejemplo 2: Sucesión de Fibonacci (recursión múltiple)}
+ 
+\textbf{Caso base:} $F(0) = 0$, $F(1) = 1$.
+
+\textbf{Caso recursivo:} $F(n) = F(n-1) + F(n-2)$ para $n \geq 2$.
+ 
+Cada llamada genera dos llamadas recursivas, por lo que el árbol de llamadas
+crece de forma exponencial y muchas subinstancias se recalculan varias
+veces (por ejemplo, $F(2)$ se calcula repetidamente al calcular $F(5)$). Este
+es el ejemplo clásico que motiva la programación dinámica con memoización
+como mejora directa sobre el diseño recursivo ingenuo.
+ 
+\subsubsection{Ejemplo 3: Torres de Hanoi (divide y vencerás recursivo)}
+ 
+\textbf{Caso base:} mover $0$ discos no requiere ninguna acción.
+
+\textbf{Caso recursivo:} para mover $n$ discos del poste origen al poste
+destino usando un poste auxiliar: mover $n-1$ discos del origen al auxiliar,
+mover el disco restante del origen al destino, y mover los $n-1$ discos del
+auxiliar al destino.
+ 
+Aquí la reducción no es solo en el tamaño del problema ($n \to n-1$), sino
+que además se necesitan dos llamadas recursivas para resolver una sola
+instancia, ilustrando cómo la recursión expresa de forma directa una
+estrategia de divide y vencerás.
+\subsubsection{Ejemplo 4: Búsqueda binaria (recursión de cola)}
+ 
+\textbf{Caso base:} el subarreglo está vacío (no se encontró el elemento), o
+el elemento central es igual al buscado.
+
+\textbf{Caso recursivo:} si el elemento buscado es menor que el elemento
+central, buscar recursivamente en la mitad izquierda; si es mayor, buscar en
+la mitad derecha.
+ 
+La llamada recursiva es la última operación del algoritmo y no queda trabajo
+pendiente después de que retorne, por lo que es un ejemplo de recursión de
+cola: puede convertirse directamente en un bucle \texttt{while} sin cambiar
+su comportamiento.
+ 
+% ------------------------------------------------------------
+\subsection{Resumen}
+ 
+\begin{center}
+\small
+\renewcommand{\arraystretch}{1.5}
+\begin{tabular}{|l|l|l|}
+\hline
+\textbf{Ejemplo} & \textbf{Tipo de recursión} & \textbf{Relación de recurrencia} \\
+\hline
+Factorial & Lineal & $T(n) = T(n-1) + \Theta(1)$ \\
+\hline
+Fibonacci (ingenuo) & Múltiple (en árbol) & $T(n) = T(n-1) + T(n-2) + \Theta(1)$ \\
+\hline
+Torres de Hanoi & Múltiple (divide y vencerás) & $T(n) = 2T(n-1) + \Theta(1)$ \\
+\hline
+Búsqueda binaria & De cola & $T(n) = T(n/2) + \Theta(1)$ \\
+\hline
+\end{tabular}
+\end{center}
+ 
+El diseño recursivo, entonces, no es solo una forma distinta de escribir un
+algoritmo: define directamente la relación de recurrencia que describe su
+costo, la cual puede resolverse con los métodos revisados anteriormente
+(iteración, sustitución, árbol de recursión, ecuación característica o el
+Teorema Maestro) para conocer su complejidad.
+
+\section{Referencias bibliográficas}
+    \bibliographystyle{apacite}
+    \nocite{*}
+    \bibliography{referencias}
+
+\end{document}

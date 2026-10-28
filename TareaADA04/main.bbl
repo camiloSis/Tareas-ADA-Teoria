@@ -1,0 +1,182 @@
+\begin{thebibliography}{}
+
+\bibitem [\protect \citeauthoryear {%
+Akra%
+\ \BBA {} Bazzi%
+}{%
+Akra%
+\ \BBA {} Bazzi%
+}{%
+{\protect \APACyear {1998}}%
+}]{%
+akrabazzi1998}
+\APACinsertmetastar {%
+akrabazzi1998}%
+\begin{APACrefauthors}%
+Akra, M.%
+\BCBT {}\ \BBA {} Bazzi, L.%
+\end{APACrefauthors}%
+\unskip\
+\newblock
+\APACrefYearMonthDay{1998}{}{}.
+\newblock
+{\BBOQ}\APACrefatitle {On the Solution of Linear Recurrence Equations} {On the
+  solution of linear recurrence equations}.{\BBCQ}
+\newblock
+\APACjournalVolNumPages{Computational Optimization and
+  Applications}{10}{2}{195--210}.
+\PrintBackRefs{\CurrentBib}
+
+\bibitem [\protect \citeauthoryear {%
+Bentley%
+, Haken%
+\BCBL {}\ \BBA {} Saxe%
+}{%
+Bentley%
+\ \protect \BOthers {.}}{%
+{\protect \APACyear {1980}}%
+}]{%
+bentley1980}
+\APACinsertmetastar {%
+bentley1980}%
+\begin{APACrefauthors}%
+Bentley, J\BPBI L.%
+, Haken, D.%
+\BCBL {}\ \BBA {} Saxe, J\BPBI B.%
+\end{APACrefauthors}%
+\unskip\
+\newblock
+\APACrefYearMonthDay{1980}{}{}.
+\newblock
+{\BBOQ}\APACrefatitle {A General Method for Solving Divide-and-Conquer
+  Recurrences} {A general method for solving divide-and-conquer
+  recurrences}.{\BBCQ}
+\newblock
+\APACjournalVolNumPages{ACM SIGACT News}{12}{3}{36--44}.
+\PrintBackRefs{\CurrentBib}
+
+\bibitem [\protect \citeauthoryear {%
+Brassard%
+\ \BBA {} Bratley%
+}{%
+Brassard%
+\ \BBA {} Bratley%
+}{%
+{\protect \APACyear {1996}}%
+}]{%
+brassardbratley1996}
+\APACinsertmetastar {%
+brassardbratley1996}%
+\begin{APACrefauthors}%
+Brassard, G.%
+\BCBT {}\ \BBA {} Bratley, P.%
+\end{APACrefauthors}%
+\unskip\
+\newblock
+\APACrefYear{1996}.
+\newblock
+\APACrefbtitle {Fundamentals of Algorithmics} {Fundamentals of algorithmics}.
+\newblock
+\APACaddressPublisher{Upper Saddle River, NJ}{Prentice-Hall}.
+\PrintBackRefs{\CurrentBib}
+
+\bibitem [\protect \citeauthoryear {%
+Cormen%
+, Leiserson%
+, Rivest%
+\BCBL {}\ \BBA {} Stein%
+}{%
+Cormen%
+\ \protect \BOthers {.}}{%
+{\protect \APACyear {2022}}%
+}]{%
+clrs}
+\APACinsertmetastar {%
+clrs}%
+\begin{APACrefauthors}%
+Cormen, T\BPBI H.%
+, Leiserson, C\BPBI E.%
+, Rivest, R\BPBI L.%
+\BCBL {}\ \BBA {} Stein, C.%
+\end{APACrefauthors}%
+\unskip\
+\newblock
+\APACrefYear{2022}.
+\newblock
+\APACrefbtitle {Introduction to Algorithms} {Introduction to algorithms}\
+  (\PrintOrdinal{4}\ \BEd).
+\newblock
+\APACaddressPublisher{}{MIT Press}.
+\PrintBackRefs{\CurrentBib}
+
+\bibitem [\protect \citeauthoryear {%
+Levitin%
+}{%
+Levitin%
+}{%
+{\protect \APACyear {2012}}%
+}]{%
+levitin2012}
+\APACinsertmetastar {%
+levitin2012}%
+\begin{APACrefauthors}%
+Levitin, A.%
+\end{APACrefauthors}%
+\unskip\
+\newblock
+\APACrefYear{2012}.
+\newblock
+\APACrefbtitle {Introduction to the Design and Analysis of Algorithms}
+  {Introduction to the design and analysis of algorithms}\ (\PrintOrdinal{3}\
+  \BEd).
+\newblock
+\APACaddressPublisher{}{Pearson}.
+\PrintBackRefs{\CurrentBib}
+
+\bibitem [\protect \citeauthoryear {%
+Rosen%
+}{%
+Rosen%
+}{%
+{\protect \APACyear {2019}}%
+}]{%
+rosen2019}
+\APACinsertmetastar {%
+rosen2019}%
+\begin{APACrefauthors}%
+Rosen, K\BPBI H.%
+\end{APACrefauthors}%
+\unskip\
+\newblock
+\APACrefYear{2019}.
+\newblock
+\APACrefbtitle {Discrete Mathematics and Its Applications} {Discrete
+  mathematics and its applications}\ (\PrintOrdinal{8}\ \BEd).
+\newblock
+\APACaddressPublisher{}{McGraw-Hill Education}.
+\PrintBackRefs{\CurrentBib}
+
+\bibitem [\protect \citeauthoryear {%
+Wirth%
+}{%
+Wirth%
+}{%
+{\protect \APACyear {1976}}%
+}]{%
+wirth1976}
+\APACinsertmetastar {%
+wirth1976}%
+\begin{APACrefauthors}%
+Wirth, N.%
+\end{APACrefauthors}%
+\unskip\
+\newblock
+\APACrefYear{1976}.
+\newblock
+\APACrefbtitle {Algorithms + Data Structures = Programs} {Algorithms + data
+  structures = programs}.
+\newblock
+\APACaddressPublisher{Englewood Cliffs, NJ}{Prentice-Hall}.
+\PrintBackRefs{\CurrentBib}
+
+\end{thebibliography}
